@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Car Racing Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Creator profile section - moved outside and above game container -->
+    <div class="creator-section">
+        Created by <a href="https://github.com/varunbudati" target="_blank">Varun Budati</a> | <a href="https://varunbudati.github.io/" target="_blank">View Portfolio</a>
+    </div>
+    
+    <div class="game-container">
+        <div class="score-container">Score: <span id="score">0</span></div>
+        <div class="total-score-container">Total Score: <span id="totalScore">0</span></div>
+        <div class="level-container">Level: <span id="level">1</span></div>
+        <div class="lanes-container">Lanes: <span id="lanes">3</span></div>
+        
+        <!-- Powerups panel -->
+        <div class="powerups-panel">
+            <h3>Powerups</h3>
+            <div class="powerup-item">
+                <button id="shieldBtn" class="powerup-btn" disabled>Shield (100)</button>
+                <span class="powerup-count" id="shieldCount">0</span>
+            </div>
+            <div class="powerup-item">
+                <button id="slowMotionBtn" class="powerup-btn" disabled>Slow Motion (200)</button>
+                <span class="powerup-count" id="slowMotionCount">0</span>
+            </div>
+            <div class="powerup-item">
+                <button id="magnetBtn" class="powerup-btn" disabled>Point Magnet (300)</button>
+                <span class="powerup-count" id="magnetCount">0</span>
+            </div>
+            <div class="powerup-active" id="activePowerups"></div>
+            <div class="keyboard-shortcuts">
+                <p>Buy: Z, X, C</p>
+                <p>Use: 1, 2, 3</p>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls-info">
+            <p>Use Arrow Keys or Mouse to drive the car</p>
+            <div class="control-options">
+                <label>
+                    <input type="radio" name="controlType" value="keyboard" checked> Keyboard Controls
+                </label>
+                <label>
+                    <input type="radio" name="controlType" value="mouse"> Mouse Controls
+                </label>
+            </div>
+            <button id="startButton">Start Game</button>
+            <button id="restartButton" style="display: none;">Restart Game</button>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>
